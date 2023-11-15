@@ -2,10 +2,19 @@
 
 <html>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动如参商</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
 <body style="background-color:rgb(240, 239, 231)">
 
 
-    <h1 style="text-align:center">wwh</h1>
+    <h1 style="text-align:center">动如参商</h1>
     <hr />
     <h2 id="foreword" style="background-color:rgb(196, 152, 152);color:rgb(255, 255, 255);text-align:center;"
         onclick="changeForewordText()">
@@ -18,19 +27,17 @@
         function changeForewordText() {
             var textElement = document.getElementById("foreword");
 
-            if (foreword_clicked)
-            {
+            if (foreword_clicked) {
                 textElement.innerHTML = "凡是过往，皆为序章";
             }
-            else
-            {
-            date = new Date();
-            year = date.getFullYear();
-            month = date.getMonth() + 1;
-            day = date.getDate();
-            hours = date.getHours();
-            minutes = date.getMinutes();
-            textElement.innerHTML = year + "." + month + "." + day + "  " + hours + ":" + minutes;
+            else {
+                date = new Date();
+                year = date.getFullYear();
+                month = date.getMonth() + 1;
+                day = date.getDate();
+                hours = date.getHours();
+                minutes = date.getMinutes();
+                textElement.innerHTML = year + "." + month + "." + day + "  " + hours + ":" + minutes;
             }
 
             foreword_clicked = !foreword_clicked;
@@ -59,7 +66,7 @@
 
 
     <hr />
-    <a name="1" href="mujiewen.html">
+    <a name="1" href="mujiewen.html" style="text-decoration: none;">
         <p style="font-family:arial;color:rgb(112, 27, 27);font-size:40px;text-align:center;">墓碣文</p>
     </a>
     <a href="http://ziyexing.com/luxun/luxun_index.htm" target="_blank">
