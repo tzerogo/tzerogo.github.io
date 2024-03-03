@@ -1,84 +1,38 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>动如参商</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: rgb(240, 239, 231);
-        }
-
-        nav {
-            background-color: #333;
-            padding: 10px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        nav li {
-            float: left;
-            margin-right: 80px;
-        }
-
-        nav a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-        }
-
-        nav a:hover {
-            background-color: #555;
-        }
-    </style>
-
 </head>
 
 <body>
 
-
     <header>
+        <br>
 
-        <h1 style="text-align:center">动如参商</h1>
-        <hr />
-        <h2 id="foreword" style="background-color:rgb(196, 152, 152);color:rgb(255, 255, 255);text-align:center;"
+        <a href="https://so.gushiwen.cn/shiwenv_9670cc44eef4.aspx" target="_blank">
+        <p style="text-align:center;color: black ; font-size:35px; font-weight: bold;" >人生不相见 动如参与商 </p>
+        </a>
+
+        <br><hr />
+        
+        <div class="user-head">
+        <h2 class="non-selectable" id="foreword" style="color:rgb(255, 255, 255);text-align:center;"
             onclick="changeForewordText()">
             凡是过往，皆为序章
         </h2>
+        </div>
+
+
 
     </header>
 
+    <hr /><br>
 
-    <!-- 目录  -->
-    <hr />
-
-    <nav>
-        <ul>
-            <li><a href="#1">...墓碣文...</a></li>
-            <li><a href="#2">异乡人</a></li>
-            <li><a href="#3">3</a></li>
-            <li><a href="#4">4</a></li>
-        </ul>
-    </nav>
-
-
-
-    <hr />
     <p style="text-align:center">
         <a href="http://www.artpc.cn/encyclopedia/introduction_show/408" target="_blank"> <img
                 src="https://img.zcool.cn/community/015d795e46a10ba80121651831e26c.jpg@1280w_1l_2o_100sh.jpg"
@@ -86,75 +40,101 @@
         </a>
     </p>
 
+    <br><hr />
 
-
-
-    <hr />
-    <a name="1" href="mujiewen.html" style="text-decoration: none;">
-        <p style="font-family:arial;color:rgb(112, 27, 27);font-size:40px;text-align:center;">墓碣文</p>
-    </a>
-    <a href="http://ziyexing.com/luxun/luxun_index.htm" target="_blank">
-        <p style="text-align:center;font-size:15px">鲁迅</p>
-    </a>
-
-    <p style="text-align:center;font-size:20px;">我梦见自己正和墓碣对立，读着上面的刻辞。</p>
-    <p style="text-align:center;font-size:20px;">那墓碣似是沙石所制，剥落很多，又有苔藓丛生，仅存有限的文句——</p>
-
-    <!-- <a href="https://www.bilibili.com/video/BV1AT411A7jZ/?share_source=copy_web&vd_source=f6709ec5540d8ccc865dfd6576128cb8"
-        target="_blank">
-        <p style="text-align:right;font-style: italic;">【解读Bilibili】</p>
-    </a> -->
-
-    <hr />
-    <hr />
-    <a name="2" href="yixiangren.html" style="text-decoration: none;">
-        <p style="font-family:arial;color:rgb(112, 27, 27);font-size:40px;text-align:center;">异乡人</p>
-    </a>
-    <a href="https://www.hplovecraft.com" target="_blank">
-        <p style="text-align:center;font-size:15px">洛夫克拉夫特</p>
-    </a>
-
-    <p style="text-align:center;font-size:20px;"><i>那一夜，男爵又做了悲哀的梦，那真是个漫长的恶梦</i></p>
-    <p style="text-align:center;padding-left: 600px;font-size:20px;;"><i>——济慈</i></p>
-
-    <p style="text-align:left;text-indent: 2em;font-size:20px; padding: 0 80px; ">一个人对童年时代的回忆只勾起了恐惧和悲伤是多么地不幸啊。一个只能想起自己在一间宽广而阴森、悬着褐色帷幔、排着足以令人疯狂的古书的房间里度过的时光的人是多么悲惨啊。诸神赐予了我许多——迷茫、失落、空洞和破碎；可每当我的心短暂地动摇，想要前往彼方、追寻别的命运时，我却会不可思议地满足于这些记忆、不顾一切地将这些渐渐消逝的记忆紧抓不放。
-    </p>
-
-
-
-
+    <div class="container">
+        <div class="testimonial">
+            <div class="testimonial-text">
+                <div class="user-text active-text">
+                    <a name="1" href="mujiewen.html" style="text-decoration: none;">
+                    <p style="color:rgb(255, 255, 255);">我梦见自己正和墓碣对立，读着上面的刻辞。<br> 那墓碣似是沙石所制，剥落很多，又有苔藓丛生，<br>仅存有限的文句——</p>
+                    </a>
+                </div>
+                <div class="user-text">
+                    <a name="2" href="yixiangren.html" style="text-decoration: none;">
+                    <p style="color:rgb(255, 255, 255);">一个人对童年时代的回忆只勾起了恐惧和悲伤是多么地不幸啊。<br>一个只能想起自己在一间宽广而阴森、悬着褐色帷幔、排着足以令人疯狂的古书的房间里<br>度过的时光的人是多么悲惨啊。</p>
+                    </a>
+                </div>
+            </div>
+            <div class="testimonial-pic">
+                <img src="./luxun.webp" class="user-pic active-pic" onclick="showReview()">
+                <img src="./lovecraft.webp" class="user-pic" onclick="showReview()">
+            </div>
+        </div>
+    </div>
 
     <hr />
+
 
     <footer>
         <!-- 页脚内容 -->
-        <p>&copy; 2023 My Website</p>
+        <p>&copy; 2024 My Website</p>
     </footer>
 
 
+
+
+
+
+    <script>
+        var foreword_clicked = false;
+
+        function changeForewordText() {
+            var textElement = document.getElementById("foreword");
+
+            if (foreword_clicked) {
+                textElement.innerHTML = "凡是过往，皆为序章";
+            }
+            else {
+                date = new Date();
+                year = date.getFullYear();
+                month = date.getMonth() + 1;
+                day = date.getDate();
+                hours = date.getHours();
+                minutes = date.getMinutes();
+                textElement.innerHTML = year + "." + month + "." + day + "  " + hours + ":" + minutes;
+            }
+
+            foreword_clicked = !foreword_clicked;
+        }
+
+        function showReview() {
+            let userTexts = document.getElementsByClassName("user-text")
+            let userPics = document.getElementsByClassName("user-pic")
+            for (userPic of userPics) {
+                userPic.classList.remove("active-pic")
+            }
+            for (userText of userTexts) {
+                userText.classList.remove("active-text")
+            }
+            let i = Array.from(userPics).indexOf(event.target)
+            userPics[i].classList.add("active-pic")
+            userTexts[i].classList.add("active-text")
+        }
+
+        window.onload = function () {
+            var userTexts = document.querySelectorAll('.user-text');
+            var userPics = document.querySelectorAll('.user-pic');
+
+            var randomIndex = Math.floor(Math.random() * userTexts.length);
+
+            for (var i = 0; i < userTexts.length; i++) {
+                userTexts[i].classList.remove('active-text');
+                userPics[i].classList.remove('active-pic');
+            }
+
+            userTexts[randomIndex].classList.add('active-text');
+            userPics[randomIndex].classList.add('active-pic');
+        };
+    </script>
+
+
+
+
+
+
+
+
 </body>
-
-<script>
-    var foreword_clicked = false;
-
-    function changeForewordText() {
-        var textElement = document.getElementById("foreword");
-
-        if (foreword_clicked) {
-            textElement.innerHTML = "凡是过往，皆为序章";
-        }
-        else {
-            date = new Date();
-            year = date.getFullYear();
-            month = date.getMonth() + 1;
-            day = date.getDate();
-            hours = date.getHours();
-            minutes = date.getMinutes();
-            textElement.innerHTML = year + "." + month + "." + day + "  " + hours + ":" + minutes;
-        }
-
-        foreword_clicked = !foreword_clicked;
-    }
-</script>
 
 </html>
