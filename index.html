@@ -1,141 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <meta name="description" content="Tzerogo主页">
     <title>动如参商</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
-
 <body>
-
     <header>
-        <br>
-
-        <a href="https://so.gushiwen.cn/shiwenv_9670cc44eef4.aspx" target="_blank">
-        <p style="text-align:center;color: black ; font-size:35px; font-weight: bold;" >人生不相见 动如参与商 </p>
-        </a>
-
-        <br><hr />
-        
-        <div class="user-head">
-        <h2 class="non-selectable" id="foreword" style="color:rgb(255, 255, 255);text-align:center;"
-            onclick="changeForewordText()">
-            凡是过往，皆为序章
-        </h2>
-        </div>
-
-
-
+        <nav class="navbar">
+            <div class="logo">
+                <!-- <a href="https://so.gushiwen.cn/shiwenv_9670cc44eef4.aspx" target="_blank">
+                    人生不相见 动如参与商
+                </a> -->
+                <a 
+                href="#"
+                id="main-title"
+                >
+                    凡是过往，皆为序章
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#articles">文章</a></li>
+                <li><a href="pages/about.html" >关于</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
     </header>
 
-    <hr /><br>
+    <main>
+        <section id="home" class="home">
+            <h1>欢迎来到作家文章展示网站</h1>
+            <p>在这里，您可以阅读到各种精彩的文章。</p>
+        </section>
 
-    <p style="text-align: center;">
-        <a href="http://www.artpc.cn/encyclopedia/introduction_show/408" target="_blank">
-            <img src="https://img.zcool.cn/community/015d795e46a10ba80121651831e26c.jpg@1280w_1l_2o_100sh.jpg"
-                alt="The Starry Night- van Gogh" style="width: 40%; height: auto;" />
-        </a>
-    </p>
-    
-
-    <br><hr /><br>
-
-    <div class="container">
-        <div class="testimonial">
-            <div class="testimonial-text">
-                <div class="user-text active-text">
-                    <a name="1" href="mujiewen.html" style="text-decoration: none;">
-                    <p style="color:rgb(255, 255, 255);">我梦见自己正和墓碣对立，读着上面的刻辞。<br> 那墓碣似是沙石所制，剥落很多，又有苔藓丛生，<br>仅存有限的文句——</p>
-                    </a>
+        <section id="articles" class="articles">
+            <h2>文章列表</h2>
+            <div class="article-list">
+                <!-- 文章列表 -->
+                <div class="article-item">
+                    <h3><a href="#">文章标题1</a></h3>
+                    <p>作者：作家A</p>
+                    <p>简介：这是一篇关于……的文章。</p>
                 </div>
-                <div class="user-text">
-                    <a name="2" href="yixiangren.html" style="text-decoration: none;">
-                    <p style="color:rgb(255, 255, 255);">一个人对童年时代的回忆只勾起了恐惧和悲伤是多么地不幸啊。<br>一个只能想起自己在一间宽广而阴森、悬着褐色帷幔、排着足以令人疯狂的古书的房间里度过的时光的人是多么悲惨啊。</p>
-                    </a>
+                <div class="article-item">
+                    <h3><a href="#">文章标题2</a></h3>
+                    <p>作者：作家B</p>
+                    <p>简介：这是一篇关于……的文章。</p>
                 </div>
+                <!-- 可继续添加更多文章 -->
             </div>
-            <div class="testimonial-pic">
-                <img src="./luxun.webp" class="user-pic active-pic" onclick="showReview()">
-                <img src="./lovecraft.webp" class="user-pic" onclick="showReview()">
-            </div>
-        </div>
-    </div>
+        </section>
 
-    <hr />
-
+        <section id="about" class="about">
+            <h2>关于我们</h2>
+            
+            <p>这是一个展示作家文章的网站，旨在提供一个平台，让读者能够欣赏到各种优秀的作品。</p>
+        </section>
+    </main>
 
     <footer>
-        <!-- 页脚内容 -->
-        <p>&copy; 2024 Drss</p>
+        <p>&copy; 2025 Drss</p>
     </footer>
 
-
-
-
-
-
-    <script>
-        var foreword_clicked = false;
-
-        function changeForewordText() {
-            var textElement = document.getElementById("foreword");
-
-            if (foreword_clicked) {
-                textElement.innerHTML = "凡是过往，皆为序章";
-            }
-            else {
-                date = new Date();
-                year = date.getFullYear();
-                month = date.getMonth() + 1;
-                day = date.getDate();
-                hours = date.getHours();
-                minutes = date.getMinutes();
-                textElement.innerHTML = year + "." + month + "." + day + "  " + hours + ":" + minutes;
-            }
-
-            foreword_clicked = !foreword_clicked;
-        }
-
-        function showReview() {
-            let userTexts = document.getElementsByClassName("user-text")
-            let userPics = document.getElementsByClassName("user-pic")
-            for (userPic of userPics) {
-                userPic.classList.remove("active-pic")
-            }
-            for (userText of userTexts) {
-                userText.classList.remove("active-text")
-            }
-            let i = Array.from(userPics).indexOf(event.target)
-            userPics[i].classList.add("active-pic")
-            userTexts[i].classList.add("active-text")
-        }
-
-        window.onload = function () {
-            var userTexts = document.querySelectorAll('.user-text');
-            var userPics = document.querySelectorAll('.user-pic');
-
-            var randomIndex = Math.floor(Math.random() * userTexts.length);
-
-            for (var i = 0; i < userTexts.length; i++) {
-                userTexts[i].classList.remove('active-text');
-                userPics[i].classList.remove('active-pic');
-            }
-
-            userTexts[randomIndex].classList.add('active-text');
-            userPics[randomIndex].classList.add('active-pic');
-        };
-    </script>
-
-
-
-
-
-
-
-
+    <script src="js/scripts.js"></script>
 </body>
-
 </html>
