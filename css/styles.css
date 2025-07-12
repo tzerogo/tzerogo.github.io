@@ -106,6 +106,10 @@ main {
     margin: 0 auto;
 }
 
+.post-header {
+    background-color: #5c5c5c;
+}
+
 .post-title {
     font-size: 2rem;
     margin-left: 2rem;
@@ -114,7 +118,7 @@ main {
 
 .post-meta {
     font-size: 0.9rem;
-    color: #666;
+    color: #cac8c8;
     margin-left: 2rem;
     margin-bottom: 0rem;
 }
@@ -137,6 +141,39 @@ main {
     margin: 1.5rem 0;
 }
 
+/* 诗歌样式 */
+.poem-content {
+    text-indent: 0; /* 诗歌不需要首行缩进 */
+    text-align: center;
+}
+
+.poem-line {
+    margin: 0.5rem 0;
+    line-height: 2;
+    font-size: 1.1rem;
+}
+
+/* 错误信息样式 */
+.error-message {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+}
+
+.error-message h2 {
+    color: #e74c3c;
+    margin-bottom: 1rem;
+}
+
+.error-message a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.error-message a:hover {
+    text-decoration: underline;
+}
+
 /* 页脚 */
 footer {
     background-color: #333;
@@ -156,8 +193,8 @@ footer {
     .nav-links {
         position: fixed; /* 固定在页面顶部 */
         top: 60px; /* 从汉堡菜单下方开始显示 */
-        left: 78%;
-        width: 21%;
+        right: 0; /* 改为右对齐 */
+        width: 200px; /* 固定宽度 */
         background-color: #333;
         display: none; /* 默认隐藏 */
         flex-direction: column;
@@ -165,6 +202,7 @@ footer {
         padding: 10px 0;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         z-index: 999;
+        border-radius: 0 0 0 10px;
     }
 
     .nav-links.active {
@@ -211,7 +249,31 @@ footer {
         font-size: 1.2rem;
     }
 
-    
+    /* 移动端诗歌样式 */
+    .poem-line {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    /* 移动端文章列表优化 */
+    .article-list {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .article-item {
+        padding: 0.8rem;
+    }
+
+    /* 移动端主内容区域优化 */
+    main {
+        padding: 1rem;
+    }
+
+    .home h1 {
+        font-size: 1.3rem;
+        line-height: 1.4;
+    }
 }
 
 
