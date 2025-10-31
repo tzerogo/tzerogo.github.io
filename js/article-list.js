@@ -3,11 +3,12 @@ class ArticleListGenerator {
     constructor() {
         this.proseListContainer = document.querySelector('.prose-list');
         this.poemListContainer = document.querySelector('.poem-list');
+        this.blogListContainer = document.querySelector('.blog-list');
         this.init();
     }
 
     async init() {
-        if (this.proseListContainer && this.poemListContainer) {
+        if (this.proseListContainer && this.poemListContainer && this.blogListContainer) {
             await this.loadArticleList();
         }
     }
@@ -16,10 +17,12 @@ class ArticleListGenerator {
         try {
             const articlesList = await this.getArticlesList();
             // 分组
-            const proseArticles = articlesList.filter(a => a.type !== 'poem');
+            const proseArticles = articlesList.filter(a => a.type !== 'poem'&& a.type !== 'blog');
             const poemArticles = articlesList.filter(a => a.type === 'poem');
+            const blogArticles = articlesList.filter(a => a.type === 'blog');
             this.displayArticles(proseArticles, this.proseListContainer);
             this.displayArticles(poemArticles, this.poemListContainer);
+            this.displayArticles(blogArticles, this.blogListContainer);
         } catch (error) {
             this.showDefaultArticles();
         }
@@ -48,6 +51,20 @@ class ArticleListGenerator {
                 author: '李贺',
                 description: '飞光飞光，劝尔一杯酒。吾不识青天高，黄地厚。',
                 type: 'poem'
+            },
+            {
+                filename: 'NN',
+                title: '神经网络',
+                author: 'Tzerogo',
+                description: '1',
+                type: 'blog'
+            },
+            {
+                filename: 'SP',
+                title: '随机过程',
+                author: 'Tzerogo',
+                description: '1',
+                type: 'blog'
             }
         ];
     }
@@ -55,7 +72,7 @@ class ArticleListGenerator {
     displayArticles(articles, container) {
         const html = articles.map(article => `
             <div class="article-item">
-                <h3><a href="pages/Article/reader.html?article=${article.filename}">${article.title}</a></h3>
+                <h3><a href="pages/Article/reader.html?article=${article.filename}&type=${article.type}">${article.title}</a></h3>
                 <p>作者：${article.author}</p>
                 <p>简介：${article.description}</p>
             </div>
@@ -68,9 +85,9 @@ class ArticleListGenerator {
         const defaultArticles = [
             {
                 filename: 'mujiewen',
-                title: '墓碣文',
-                author: '鲁迅',
-                description: '我梦见自己正和墓碣对立，读着上面的刻辞……',
+                title: '加载失败',
+                author: '堂吉诃德',
+                description: '哈基米',
                 type: 'prose'
             },
             

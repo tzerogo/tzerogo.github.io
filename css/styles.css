@@ -141,6 +141,26 @@ main {
     margin: 1.5rem 0;
 }
 
+/* Markdown / blog 渲染的图片自适应，避免溢出容器 */
+.post-content img,
+.markdown-body img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}
+
+/* 针对 KaTeX 或 markdown 回退样式的调整 */
+.markdown-fallback {
+    white-space: pre-wrap; /* 保持换行 */
+    font-family: inherit;
+    background: #fafafa;
+    padding: 1rem;
+    border-radius: 6px;
+    color: #333;
+    overflow-x: auto;
+}
+
 /* 诗歌样式 */
 .poem-content {
     text-indent: 0; /* 诗歌不需要首行缩进 */
