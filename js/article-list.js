@@ -60,7 +60,7 @@ class ArticleListGenerator {
                 type: 'poem'
             },
             {
-                filename: ' LSTM',
+                filename: 'LSTM',
                 title: 'LSTM',
                 author: 'Tzerogo',
                 description: 'Long Short-Term Memory，长短期记忆网络',
