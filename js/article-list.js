@@ -53,17 +53,24 @@ class ArticleListGenerator {
                 type: 'poem'
             },
             {
-                filename: 'NN',
-                title: '神经网络',
+                filename: 'WangXiZhi_LanTinJiXu',
+                title: '兰亭集序',
+                author: '王羲之',
+                description: '况修短随化，终期于尽。',
+                type: 'poem'
+            },
+            {
+                filename: ' LSTM',
+                title: 'LSTM',
                 author: 'Tzerogo',
-                description: '1',
+                description: 'Long Short-Term Memory，长短期记忆网络',
                 type: 'blog'
             },
             {
                 filename: 'SP',
                 title: '随机过程',
                 author: 'Tzerogo',
-                description: '1',
+                description: '一族无穷多个、相互有关的随机变量，就是随机过程。',
                 type: 'blog'
             }
         ];
